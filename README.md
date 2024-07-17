@@ -40,7 +40,7 @@ Use this option if your architecture is not supported by the pre-built binaries 
 First, install [Rust](https://www.rust-lang.org/tools/install) (using the recommended `rustup` installation method) and then
 
 ```bash
-cargo install spotify-tui
+cargo install --path .
 ```
 
 This method will build the binary from source.
