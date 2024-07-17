@@ -1,20 +1,6 @@
 # Spotify TUI
 
-![Continuous Integration](https://github.com/Rigellute/spotify-tui/workflows/Continuous%20Integration/badge.svg?branch=master&event=push)
-![](https://img.shields.io/badge/license-MIT-blueviolet.svg)
-![](https://tokei.rs/b1/github/Rigellute/spotify-tui?category=code)
-[![Crates.io](https://img.shields.io/crates/v/spotify-tui.svg)](https://crates.io/crates/spotify-tui)
-![](https://img.shields.io/github/v/release/Rigellute/spotify-tui?color=%23c694ff)
-
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-94-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-[![Follow Alexander Keliris (Rigellute)](https://img.shields.io/twitter/follow/AlexKeliris?label=Follow%20Alexander%20Keliris%20%28Rigellute%29&style=social)](https://twitter.com/intent/follow?screen_name=AlexKeliris)
-
-A Spotify client for the terminal written in Rust.
-
-![Demo](https://user-images.githubusercontent.com/12150276/75177190-91d4ab00-572d-11ea-80bd-c5e28c7b17ad.gif)
+[![Forked from Alexander Keliris (Rigellute)](https://img.shields.io/twitter/follow/AlexKeliris?label=Follow%20Alexander%20Keliris%20%28Rigellute%29&style=social)](https://twitter.com/intent/follow?screen_name=AlexKeliris)
 
 The terminal in the demo above is using the [Rigel theme](https://rigel.netlify.com/).
 
@@ -47,71 +33,6 @@ The terminal in the demo above is using the [Rigel theme](https://rigel.netlify.
 
 The binary executable is `spt`.
 
-### Homebrew
-
-For both macOS and Linux
-
-```bash
-brew install spotify-tui
-```
-
-To update, run
-
-```bash
-brew upgrade spotify-tui
-```
-
-### Snap
-
-For a system with Snap installed, run
-
-```bash
-snap install spt
-```
-
-The stable version will be installed for you automatically.
-
-If you want to install the nightly build, run
-
-```bash
-snap install spt --edge
-```
-
-### AUR
-
-For those on Arch Linux you can find the package on AUR [here](https://aur.archlinux.org/packages/spotify-tui/). If however you're using an AUR helper you can install directly from that, for example (in the case of [yay](https://github.com/Jguer/yay)), run
-
-```bash
-yay -S spotify-tui
-```
-
-### Nix
-
-Available as the package `spotify-tui`. To install run:
-
-```bash
-nix-env -iA nixpkgs.spotify-tui
-```
-
-Where `nixpkgs` is the channel name in your configuration. For a more up-to-date installation, use the unstable channel.
-It is also possible to add the package to `environment.systemPackages` (for NixOS), or `home.packages` when using [home-manager](https://github.com/rycee/home-manager).
-
-### Void Linux
-
-Available on the official repositories. To install, run
-
-```bash
-sudo xbps-install -Su spotify-tui
-```
-
-### Fedora/CentOS
-
-Available on the [Copr](https://copr.fedorainfracloud.org/coprs/atim/spotify-tui/) repositories. To install, run
-
-```bash
-sudo dnf copr enable atim/spotify-tui -y && sudo dnf install spotify-tui
-```
-
 ### Cargo
 
 Use this option if your architecture is not supported by the pre-built binaries found on the [releases page](https://github.com/Rigellute/spotify-tui/releases).
@@ -133,27 +54,6 @@ For basic installation instructions, see [install OpenSSL](https://docs.rs/opens
 In order to locate dependencies, the compilation also requires `pkg-config` to be installed.
 
 If you are using the Windows Subsystem for Linux, you'll need to [install additional dependencies](#windows-subsystem-for-linux).
-
-### Windows 10
-
-#### Scoop installer
-
-First, make sure scoop installer is on your windows box, for instruction please visit [scoop.sh](https://scoop.sh)
-
-Then open powershell and run following two commands:
-
-```bash
-scoop bucket add scoop-bucket https://github.com/Rigellute/scoop-bucket
-scoop install spotify-tui
-```
-
-After that program is available as: `spt` or `spt.exe`
-
-### Manual
-
-1. Download the latest [binary](https://github.com/Rigellute/spotify-tui/releases) for your OS.
-1. `cd` to the file you just downloaded and unzip
-1. `cd` to `spotify-tui` and run with `./spt`
 
 ## Connecting to Spotify’s API
 
@@ -218,6 +118,8 @@ The following is a sample config.yml file:
 
 # The theme colours can be an rgb string of the form "255, 255, 255" or a string that references the colours from your terminal theme: Reset, Black, Red, Green, Yellow, Blue, Magenta, Cyan, Gray, DarkGray, LightRed, LightGreen, LightYellow, LightBlue, LightMagenta, LightCyan, White.
 theme:
+  analysis_bar: Cyan
+  analysis_bar_text: Cyan
   active: Cyan # current playing song in list
   banner: LightCyan # the "spotify-tui" banner on launch
   error_border: Red # error dialog border
